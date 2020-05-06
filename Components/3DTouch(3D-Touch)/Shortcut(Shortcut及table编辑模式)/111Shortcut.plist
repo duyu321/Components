@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>photo_delete</string>
+		<key>title</key>
+		<string>添加更多快捷方式</string>
+		<key>subtitle</key>
+		<string></string>
+		<key>methods</key>
+		<string>shortcut.add</string>
+	</dict>
+</array>
+</plist>
