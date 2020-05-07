@@ -13,6 +13,8 @@
 		18C580F92462B98900EC05A9 /* login_wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F32462B98900EC05A9 /* login_wechat@3x.png */; };
 		18C580FA2462B98900EC05A9 /* login_weibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F42462B98900EC05A9 /* login_weibo@3x.png */; };
 		18C580FB2462B98900EC05A9 /* login_weibo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F52462B98900EC05A9 /* login_weibo@2x.png */; };
+		18C580FF24639DF200EC05A9 /* DKAutoLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C580FD24639DF200EC05A9 /* DKAutoLayoutCell.m */; };
+		18C5810024639DF200EC05A9 /* DKAutoLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C580FE24639DF200EC05A9 /* DKAutoLayoutCell.xib */; };
 		18E581FE2462AD9F00029321 /* ComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E581FD2462AD9F00029321 /* ComponentsTests.m */; };
 		18E582092462AD9F00029321 /* ComponentsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582082462AD9F00029321 /* ComponentsUITests.m */; };
 		18E582DA2462AE0900029321 /* TZImageUploadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582182462AE0900029321 /* TZImageUploadOperation.m */; };
@@ -88,9 +90,7 @@
 		18E583212462AE0A00029321 /* UIView+MSSLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582CB2462AE0900029321 /* UIView+MSSLayout.m */; };
 		18E583222462AE0A00029321 /* PhotosContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582CC2462AE0900029321 /* PhotosContainerView.m */; };
 		18E583232462AE0A00029321 /* DKAutoLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E582CF2462AE0900029321 /* DKAutoLayoutViewController.xib */; };
-		18E583242462AE0A00029321 /* DKAutoLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582D12462AE0900029321 /* DKAutoLayoutCell.m */; };
 		18E583252462AE0A00029321 /* DKAutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582D22462AE0900029321 /* DKAutoLayoutViewController.m */; };
-		18E583262462AE0A00029321 /* DKAutoLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E582D32462AE0900029321 /* DKAutoLayoutCell.xib */; };
 		18E583272462AE0A00029321 /* DKAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582D52462AE0900029321 /* DKAutoLayout.m */; };
 		18E583282462AE0A00029321 /* DKAutoLayoutImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582D62462AE0900029321 /* DKAutoLayoutImage.m */; };
 		18E5832F2462AFB100029321 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E5832E2462AFB100029321 /* NotificationCenter.framework */; };
@@ -144,6 +144,9 @@
 		18C580F32462B98900EC05A9 /* login_wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@3x.png"; sourceTree = "<group>"; };
 		18C580F42462B98900EC05A9 /* login_weibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_weibo@3x.png"; sourceTree = "<group>"; };
 		18C580F52462B98900EC05A9 /* login_weibo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_weibo@2x.png"; sourceTree = "<group>"; };
+		18C580FC24639DF200EC05A9 /* DKAutoLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAutoLayoutCell.h; sourceTree = "<group>"; };
+		18C580FD24639DF200EC05A9 /* DKAutoLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAutoLayoutCell.m; sourceTree = "<group>"; };
+		18C580FE24639DF200EC05A9 /* DKAutoLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAutoLayoutCell.xib; sourceTree = "<group>"; };
 		18E581DE2462AD9D00029321 /* Components.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Components.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E581F92462AD9F00029321 /* ComponentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComponentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E581FD2462AD9F00029321 /* ComponentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentsTests.m; sourceTree = "<group>"; };
@@ -282,12 +285,9 @@
 		18E582CA2462AE0900029321 /* mss_browseLoading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mss_browseLoading@2x.png"; sourceTree = "<group>"; };
 		18E582CB2462AE0900029321 /* UIView+MSSLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MSSLayout.m"; sourceTree = "<group>"; };
 		18E582CC2462AE0900029321 /* PhotosContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosContainerView.m; sourceTree = "<group>"; };
-		18E582CE2462AE0900029321 /* DKAutoLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAutoLayoutCell.h; sourceTree = "<group>"; };
 		18E582CF2462AE0900029321 /* DKAutoLayoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAutoLayoutViewController.xib; sourceTree = "<group>"; };
 		18E582D02462AE0900029321 /* DKAutoLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAutoLayoutViewController.h; sourceTree = "<group>"; };
-		18E582D12462AE0900029321 /* DKAutoLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAutoLayoutCell.m; sourceTree = "<group>"; };
 		18E582D22462AE0900029321 /* DKAutoLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAutoLayoutViewController.m; sourceTree = "<group>"; };
-		18E582D32462AE0900029321 /* DKAutoLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKAutoLayoutCell.xib; sourceTree = "<group>"; };
 		18E582D52462AE0900029321 /* DKAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAutoLayout.m; sourceTree = "<group>"; };
 		18E582D62462AE0900029321 /* DKAutoLayoutImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAutoLayoutImage.m; sourceTree = "<group>"; };
 		18E582D72462AE0900029321 /* DKAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAutoLayout.h; sourceTree = "<group>"; };
@@ -950,9 +950,6 @@
 		18E582CD2462AE0900029321 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				18E582CE2462AE0900029321 /* DKAutoLayoutCell.h */,
-				18E582D12462AE0900029321 /* DKAutoLayoutCell.m */,
-				18E582D32462AE0900029321 /* DKAutoLayoutCell.xib */,
 				18E582D02462AE0900029321 /* DKAutoLayoutViewController.h */,
 				18E582D22462AE0900029321 /* DKAutoLayoutViewController.m */,
 				18E582CF2462AE0900029321 /* DKAutoLayoutViewController.xib */,
@@ -974,6 +971,9 @@
 		18E582D92462AE0900029321 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18C580FC24639DF200EC05A9 /* DKAutoLayoutCell.h */,
+				18C580FD24639DF200EC05A9 /* DKAutoLayoutCell.m */,
+				18C580FE24639DF200EC05A9 /* DKAutoLayoutCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1147,7 +1147,7 @@
 				18E582FD2462AE0A00029321 /* DKStatusBarViewController.xib in Resources */,
 				18E583022462AE0A00029321 /* 005.jpg in Resources */,
 				18E582FF2462AE0A00029321 /* DKTestViewController.xib in Resources */,
-				18E583262462AE0A00029321 /* DKAutoLayoutCell.xib in Resources */,
+				18C5810024639DF200EC05A9 /* DKAutoLayoutCell.xib in Resources */,
 				18E582E92462AE0900029321 /* Assets.xcassets in Resources */,
 				18E5830E2462AE0A00029321 /* 111UnShortcut.plist in Resources */,
 				18E5831E2462AE0A00029321 /* mss_browseLoading@3x.png in Resources */,
@@ -1235,6 +1235,7 @@
 				18E583142462AE0A00029321 /* MSSBrowseLoadingImageView.m in Sources */,
 				18E582F12462AE0A00029321 /* UILabel+autosize.m in Sources */,
 				18E5831A2462AE0A00029321 /* UIImage+MSSScale.m in Sources */,
+				18C580FF24639DF200EC05A9 /* DKAutoLayoutCell.m in Sources */,
 				18E582E32462AE0900029321 /* DYBaseViewController.m in Sources */,
 				18E583072462AE0A00029321 /* DKMenuViewController.m in Sources */,
 				18E5831F2462AE0A00029321 /* MSSBrowseActionSheetCell.m in Sources */,
@@ -1285,7 +1286,6 @@
 				18E583032462AE0A00029321 /* DKScrollImageViewController.m in Sources */,
 				18E583052462AE0A00029321 /* JHLabel.m in Sources */,
 				18E582F72462AE0A00029321 /* UIImage+image.m in Sources */,
-				18E583242462AE0A00029321 /* DKAutoLayoutCell.m in Sources */,
 				18E582DA2462AE0900029321 /* TZImageUploadOperation.m in Sources */,
 				18E582E12462AE0900029321 /* TBTabBarController.m in Sources */,
 				18E583282462AE0A00029321 /* DKAutoLayoutImage.m in Sources */,
