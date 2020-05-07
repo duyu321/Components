@@ -29,13 +29,18 @@
 
 - (void)setUI {
     self.title = @"Widget小组件";
+    
+    // 读取
+    NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.widget.components"];
+    self.textField.text = [userDefaults objectForKey:@"widget"];
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
-    [self.textField resignFirstResponder];
+    [self.view endEditing:YES];
     
     self.textField.text = @"";
     
+    // 存储
     NSUserDefaults *userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.widget.components"];
     [userDefaults setObject:@"" forKey:@"widget"];
     [userDefaults synchronize];
@@ -47,6 +52,7 @@
 }
 
 - (IBAction)ensureButtonPressed:(id)sender {
+    [self.view endEditing:YES];
     if (self.textField.text.length == 0) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"拜托，稍微写两个字好不好" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
@@ -64,8 +70,6 @@
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:action];
     [self presentViewController:alert animated:YES completion:nil];
-    
-    [self.view endEditing:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

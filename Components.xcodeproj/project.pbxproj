@@ -802,10 +802,10 @@
 		18E5828D2462AE0900029321 /* UIMenu(长按Label工具条) */ = {
 			isa = PBXGroup;
 			children = (
-				18E5828E2462AE0900029321 /* Tools */,
 				18E582932462AE0900029321 /* Controller */,
 				18E582972462AE0900029321 /* Model */,
 				18E582982462AE0900029321 /* View */,
+				18E5828E2462AE0900029321 /* Tools */,
 			);
 			path = "UIMenu(长按Label工具条)";
 			sourceTree = "<group>";
@@ -824,9 +824,9 @@
 		18E582932462AE0900029321 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18E582962462AE0900029321 /* DKMenuViewController.h */,
 				18E582942462AE0900029321 /* DKMenuViewController.m */,
 				18E582952462AE0900029321 /* DKMenuViewController.xib */,
-				18E582962462AE0900029321 /* DKMenuViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
