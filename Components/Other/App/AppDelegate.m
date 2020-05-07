@@ -10,6 +10,7 @@
 #import "TBTabBarController.h"
 #import "DYNavigationController.h"
 #import "DK3DTouchAppIconViewController.h"
+#import "DK3DTouchWidgetViewController.h"
 #import "DKShortcut.h"
 
 @interface AppDelegate ()
@@ -52,7 +53,16 @@
 
 // Widget 进入
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    // 判断是否以Components开头
     if ([[url absoluteString] hasPrefix:@"Components"]) {
+        DYNavigationController *nav = (DYNavigationController *)((TBTabBarController *)self.window.rootViewController).selectedViewController;
+        // 判断host为green 并且 当前不在要跳转的控制器 再跳转
+        if ([[url host] isEqualToString:@"green"] && [[nav.childViewControllers lastObject] class] != [DK3DTouchWidgetViewController class]) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [nav pushViewController:[[DK3DTouchWidgetViewController alloc] init] animated:YES];
+            });
+        }
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"你点击了%@按钮",[url host]] preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             // Do something
@@ -65,11 +75,13 @@
 
 // Shortcut 进入
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        DYNavigationController *nav = (DYNavigationController *)((TBTabBarController *)self.window.rootViewController).selectedViewController;
-        [nav pushViewController:[[DK3DTouchAppIconViewController alloc] init] animated:YES];
-    });
-    
+    DYNavigationController *nav = (DYNavigationController *)((TBTabBarController *)self.window.rootViewController).selectedViewController;
+    // 判断type为add 并且 当前不在要跳转的控制器 再跳转
+    if ([shortcutItem.type isEqualToString:@"shortcut.add"] && [[nav.childViewControllers lastObject] class] != [DK3DTouchAppIconViewController class]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [nav pushViewController:[[DK3DTouchAppIconViewController alloc] init] animated:YES];
+        });
+    }
     // 不管APP在后台还是进程被杀死，只要通过主屏快捷操作进来的，都会调用这个方法
     NSLog(@"name:%@\ntype:%@", shortcutItem.localizedTitle, shortcutItem.type);
 }
