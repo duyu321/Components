@@ -78,11 +78,13 @@
     entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert|UMessageAuthorizationOptionSound;
     //如果要在iOS10显示交互式的通知，必须注意实现以下代码
     UNNotificationAction *action1_ios10 = [UNNotificationAction actionWithIdentifier:@"action1_identifier" title:@"打开应用" options:UNNotificationActionOptionForeground];
-    UNNotificationAction *action2_ios10 = [UNNotificationAction actionWithIdentifier:@"action2_identifier" title:@"忽略" options:UNNotificationActionOptionForeground];
+    UNNotificationAction *action2_ios10 = [UNNotificationAction actionWithIdentifier:@"action2_identifier" title:@"忽略" options:UNNotificationActionOptionDestructive];
+    UNTextInputNotificationAction *action3_ios10 = [UNTextInputNotificationAction actionWithIdentifier:@"action3_identifier" title:@"输入" options:UNNotificationActionOptionAuthenticationRequired textInputButtonTitle:@"回复" textInputPlaceholder:@"请输入"];
+    
     //UNNotificationCategoryOptionNone
     //UNNotificationCategoryOptionCustomDismissAction  清除通知被触发会走通知的代理方法
     //UNNotificationCategoryOptionAllowInCarPlay       适用于行车模式
-    UNNotificationCategory *category1_ios10 = [UNNotificationCategory categoryWithIdentifier:@"category1" actions:@[action1_ios10,action2_ios10]  intentIdentifiers:@[]options:UNNotificationCategoryOptionCustomDismissAction];
+    UNNotificationCategory *category1_ios10 = [UNNotificationCategory categoryWithIdentifier:@"category1" actions:@[action1_ios10,action2_ios10,action3_ios10]  intentIdentifiers:@[] options:UNNotificationCategoryOptionCustomDismissAction];
     NSSet *categories = [NSSet setWithObjects:category1_ios10, nil];
     entity.categories=categories;
 
@@ -117,6 +119,7 @@
                           ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                           ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     NSLog(@"deviceToken:%@",hexToken);
+    [UMessage registerDeviceToken:deviceToken];
 }
 
 // Widget 进入
