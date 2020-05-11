@@ -13,7 +13,7 @@
 #import "DK3DTouchWidgetViewController.h"
 #import "DKShortcut.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -23,8 +23,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 设置根控制器
     [self setRoot];
-    // 通过shortcut.plist设置APP快捷方式
+    // 通过Shortcut.plist设置APP快捷方式
     [self setShortcut];
+    // 设置友盟通用组件
+    [self setUMCommon];
+    // 设置友盟推送
+    [self setPush:launchOptions];
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -49,6 +53,70 @@
     UIApplicationShortcutItem *shoreItem = [[UIApplicationShortcutItem alloc] initWithType:@"shortcut.add" localizedTitle:@"添加更多快捷方式" localizedSubtitle:@"" icon:[UIApplicationShortcutIcon iconWithTemplateImageName:@"photo_delete"] userInfo:nil];
     [arrShortcutItem addObject:shoreItem];
     [UIApplication sharedApplication].shortcutItems = arrShortcutItem;
+}
+
+- (void)setUMCommon {
+    // 初始化友盟所有组件
+    [UMConfigure initWithAppkey:@"5eb3a719978eea082619cd1e" channel:@"App Store"];
+    // 设置打开日志
+    [UMConfigure setLogEnabled:YES];
+    //打开加密传输
+    [UMConfigure setEncryptEnabled:YES];
+    NSString* deviceID =  [UMConfigure deviceIDForIntegration];
+    if ([deviceID isKindOfClass:[NSString class]]) {
+        NSLog(@"服务器端成功返回deviceID");
+    } else {
+        NSLog(@"服务器端还没有返回deviceID");
+    }
+}
+
+- (void)setPush:(NSDictionary *)launchOptions {
+    // 设置自动清理推送
+    [UMessage setBadgeClear:YES];
+    // Push功能配置
+    UMessageRegisterEntity *entity = [[UMessageRegisterEntity alloc] init];
+    entity.types = UMessageAuthorizationOptionBadge|UMessageAuthorizationOptionAlert|UMessageAuthorizationOptionSound;
+    //如果要在iOS10显示交互式的通知，必须注意实现以下代码
+    UNNotificationAction *action1_ios10 = [UNNotificationAction actionWithIdentifier:@"action1_identifier" title:@"打开应用" options:UNNotificationActionOptionForeground];
+    UNNotificationAction *action2_ios10 = [UNNotificationAction actionWithIdentifier:@"action2_identifier" title:@"忽略" options:UNNotificationActionOptionForeground];
+    //UNNotificationCategoryOptionNone
+    //UNNotificationCategoryOptionCustomDismissAction  清除通知被触发会走通知的代理方法
+    //UNNotificationCategoryOptionAllowInCarPlay       适用于行车模式
+    UNNotificationCategory *category1_ios10 = [UNNotificationCategory categoryWithIdentifier:@"category1" actions:@[action1_ios10,action2_ios10]  intentIdentifiers:@[]options:UNNotificationCategoryOptionCustomDismissAction];
+    NSSet *categories = [NSSet setWithObjects:category1_ios10, nil];
+    entity.categories=categories;
+
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            
+        } else {
+            
+        }
+    }];
+}
+
+//iOS10新增：处理后台点击通知的代理方法
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于后台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+    } else {
+        //应用处于后台时的本地推送接受
+    }
+}
+
+// 获取deviceToken
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    if (![deviceToken isKindOfClass:[NSData class]]) return;
+    const unsigned *tokenBytes = (const unsigned *)[deviceToken bytes];
+    NSString *hexToken = [NSString stringWithFormat:@"%08x%08x%08x%08x%08x%08x%08x%08x",
+                          ntohl(tokenBytes[0]), ntohl(tokenBytes[1]), ntohl(tokenBytes[2]),
+                          ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
+                          ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
+    NSLog(@"deviceToken:%@",hexToken);
 }
 
 // Widget 进入

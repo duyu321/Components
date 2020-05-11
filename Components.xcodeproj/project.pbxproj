@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188EDE272468F54400DD161E /* DKUPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EDE252468F54400DD161E /* DKUPushViewController.m */; };
+		188EDE282468F54400DD161E /* DKUPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EDE262468F54400DD161E /* DKUPushViewController.xib */; };
+		188EDE2F2468F57E00DD161E /* DKStatusBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EDE2A2468F57D00DD161E /* DKStatusBarViewController.xib */; };
+		188EDE302468F57E00DD161E /* DKStatusBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EDE2B2468F57D00DD161E /* DKStatusBarViewController.m */; };
+		188EDE312468F57E00DD161E /* DKTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EDE2D2468F57D00DD161E /* DKTestViewController.xib */; };
+		188EDE322468F57E00DD161E /* DKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EDE2E2468F57D00DD161E /* DKTestViewController.m */; };
+		188EDE3B2468F5A400DD161E /* DKKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EDE392468F5A400DD161E /* DKKeyboardViewController.m */; };
+		188EDE3C2468F5A400DD161E /* DKKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EDE3A2468F5A400DD161E /* DKKeyboardViewController.xib */; };
 		18C580F62462B98900EC05A9 /* login_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F02462B98900EC05A9 /* login_wechat@2x.png */; };
 		18C580F72462B98900EC05A9 /* login_QQ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F12462B98900EC05A9 /* login_QQ@2x.png */; };
 		18C580F82462B98900EC05A9 /* login_QQ@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F22462B98900EC05A9 /* login_QQ@3x.png */; };
@@ -22,8 +30,6 @@
 		18E582DC2462AE0900029321 /* DKPickerPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E5821D2462AE0900029321 /* DKPickerPhotoViewController.xib */; };
 		18E582DD2462AE0900029321 /* DKPickerPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5821E2462AE0900029321 /* DKPickerPhotoViewController.m */; };
 		18E582DE2462AE0900029321 /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582222462AE0900029321 /* TZTestCell.m */; };
-		18E582DF2462AE0900029321 /* DKKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582262462AE0900029321 /* DKKeyboardViewController.m */; };
-		18E582E02462AE0900029321 /* DKKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E582282462AE0900029321 /* DKKeyboardViewController.xib */; };
 		18E582E12462AE0900029321 /* TBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5822D2462AE0900029321 /* TBTabBarController.m */; };
 		18E582E22462AE0900029321 /* DYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5822F2462AE0900029321 /* DYNavigationController.m */; };
 		18E582E32462AE0900029321 /* DYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582332462AE0900029321 /* DYBaseViewController.m */; };
@@ -50,10 +56,6 @@
 		18E582F82462AE0A00029321 /* UIImage+DY.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582702462AE0900029321 /* UIImage+DY.m */; };
 		18E582F92462AE0A00029321 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E582722462AE0900029321 /* LaunchScreen.storyboard */; };
 		18E582FA2462AE0A00029321 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582742462AE0900029321 /* main.m */; };
-		18E582FC2462AE0A00029321 /* DKStatusBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582792462AE0900029321 /* DKStatusBarViewController.m */; };
-		18E582FD2462AE0A00029321 /* DKStatusBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E5827A2462AE0900029321 /* DKStatusBarViewController.xib */; };
-		18E582FE2462AE0A00029321 /* DKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5827B2462AE0900029321 /* DKTestViewController.m */; };
-		18E582FF2462AE0A00029321 /* DKTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E5827D2462AE0900029321 /* DKTestViewController.xib */; };
 		18E583002462AE0A00029321 /* DemoVCWithXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E582832462AE0900029321 /* DemoVCWithXib.m */; };
 		18E583012462AE0A00029321 /* DemoVCWithXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E582842462AE0900029321 /* DemoVCWithXib.xib */; };
 		18E583022462AE0A00029321 /* 005.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18E582852462AE0900029321 /* 005.jpg */; };
@@ -138,6 +140,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		188EDE242468F54400DD161E /* DKUPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKUPushViewController.h; sourceTree = "<group>"; };
+		188EDE252468F54400DD161E /* DKUPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKUPushViewController.m; sourceTree = "<group>"; };
+		188EDE262468F54400DD161E /* DKUPushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKUPushViewController.xib; sourceTree = "<group>"; };
+		188EDE292468F57D00DD161E /* DKStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKStatusBarViewController.h; sourceTree = "<group>"; };
+		188EDE2A2468F57D00DD161E /* DKStatusBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKStatusBarViewController.xib; sourceTree = "<group>"; };
+		188EDE2B2468F57D00DD161E /* DKStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKStatusBarViewController.m; sourceTree = "<group>"; };
+		188EDE2C2468F57D00DD161E /* DKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTestViewController.h; sourceTree = "<group>"; };
+		188EDE2D2468F57D00DD161E /* DKTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKTestViewController.xib; sourceTree = "<group>"; };
+		188EDE2E2468F57D00DD161E /* DKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTestViewController.m; sourceTree = "<group>"; };
+		188EDE382468F5A400DD161E /* DKKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKeyboardViewController.h; sourceTree = "<group>"; };
+		188EDE392468F5A400DD161E /* DKKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKeyboardViewController.m; sourceTree = "<group>"; };
+		188EDE3A2468F5A400DD161E /* DKKeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKKeyboardViewController.xib; sourceTree = "<group>"; };
 		18C580F02462B98900EC05A9 /* login_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@2x.png"; sourceTree = "<group>"; };
 		18C580F12462B98900EC05A9 /* login_QQ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_QQ@2x.png"; sourceTree = "<group>"; };
 		18C580F22462B98900EC05A9 /* login_QQ@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_QQ@3x.png"; sourceTree = "<group>"; };
@@ -163,9 +177,6 @@
 		18E5821F2462AE0900029321 /* DKPickerPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPickerPhotoViewController.h; sourceTree = "<group>"; };
 		18E582222462AE0900029321 /* TZTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestCell.m; sourceTree = "<group>"; };
 		18E582232462AE0900029321 /* TZTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestCell.h; sourceTree = "<group>"; };
-		18E582262462AE0900029321 /* DKKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKeyboardViewController.m; sourceTree = "<group>"; };
-		18E582272462AE0900029321 /* DKKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKeyboardViewController.h; sourceTree = "<group>"; };
-		18E582282462AE0900029321 /* DKKeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKKeyboardViewController.xib; sourceTree = "<group>"; };
 		18E5822D2462AE0900029321 /* TBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTabBarController.m; sourceTree = "<group>"; };
 		18E5822E2462AE0900029321 /* DYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYBaseViewController.h; sourceTree = "<group>"; };
 		18E5822F2462AE0900029321 /* DYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNavigationController.m; sourceTree = "<group>"; };
@@ -219,12 +230,6 @@
 		18E582732462AE0900029321 /* Components.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Components.pch; sourceTree = "<group>"; };
 		18E582742462AE0900029321 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18E582752462AE0900029321 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18E582782462AE0900029321 /* DKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKTestViewController.h; sourceTree = "<group>"; };
-		18E582792462AE0900029321 /* DKStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKStatusBarViewController.m; sourceTree = "<group>"; };
-		18E5827A2462AE0900029321 /* DKStatusBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKStatusBarViewController.xib; sourceTree = "<group>"; };
-		18E5827B2462AE0900029321 /* DKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKTestViewController.m; sourceTree = "<group>"; };
-		18E5827C2462AE0900029321 /* DKStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKStatusBarViewController.h; sourceTree = "<group>"; };
-		18E5827D2462AE0900029321 /* DKTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKTestViewController.xib; sourceTree = "<group>"; };
 		18E582832462AE0900029321 /* DemoVCWithXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVCWithXib.m; sourceTree = "<group>"; };
 		18E582842462AE0900029321 /* DemoVCWithXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVCWithXib.xib; sourceTree = "<group>"; };
 		18E582852462AE0900029321 /* 005.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpg; sourceTree = "<group>"; };
@@ -347,6 +352,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		188EDE232468F52A00DD161E /* UPush(友盟推送) */ = {
+			isa = PBXGroup;
+			children = (
+				188EDE242468F54400DD161E /* DKUPushViewController.h */,
+				188EDE252468F54400DD161E /* DKUPushViewController.m */,
+				188EDE262468F54400DD161E /* DKUPushViewController.xib */,
+			);
+			path = "UPush(友盟推送)";
+			sourceTree = "<group>";
+		};
 		18E581D52462AD9D00029321 = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +397,7 @@
 				18E582802462AE0900029321 /* ScrollImage(轮播图) */,
 				18E5828D2462AE0900029321 /* UIMenu(长按Label工具条) */,
 				18E582992462AE0900029321 /* 3DTouch(3D-Touch) */,
+				188EDE232468F52A00DD161E /* UPush(友盟推送) */,
 				18E5822B2462AE0900029321 /* Main */,
 				18E5823F2462AE0900029321 /* Other */,
 				18E5823D2462AE0900029321 /* Resource */,
@@ -411,7 +427,6 @@
 			isa = PBXGroup;
 			children = (
 				18E5821C2462AE0900029321 /* Controller */,
-				18E582202462AE0900029321 /* Model */,
 				18E582212462AE0900029321 /* View */,
 				18E582172462AE0900029321 /* Tools */,
 			);
@@ -439,13 +454,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		18E582202462AE0900029321 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		18E582212462AE0900029321 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,35 +466,11 @@
 		18E582242462AE0900029321 /* Keyboard(键盘) */ = {
 			isa = PBXGroup;
 			children = (
-				18E582252462AE0900029321 /* Controller */,
-				18E582292462AE0900029321 /* Model */,
-				18E5822A2462AE0900029321 /* View */,
+				188EDE382468F5A400DD161E /* DKKeyboardViewController.h */,
+				188EDE392468F5A400DD161E /* DKKeyboardViewController.m */,
+				188EDE3A2468F5A400DD161E /* DKKeyboardViewController.xib */,
 			);
 			path = "Keyboard(键盘)";
-			sourceTree = "<group>";
-		};
-		18E582252462AE0900029321 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				18E582272462AE0900029321 /* DKKeyboardViewController.h */,
-				18E582262462AE0900029321 /* DKKeyboardViewController.m */,
-				18E582282462AE0900029321 /* DKKeyboardViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		18E582292462AE0900029321 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		18E5822A2462AE0900029321 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		18E5822B2462AE0900029321 /* Main */ = {
@@ -718,76 +702,36 @@
 		18E582762462AE0900029321 /* StatusBar(状态栏颜色) */ = {
 			isa = PBXGroup;
 			children = (
-				18E582772462AE0900029321 /* Controller */,
-				18E5827E2462AE0900029321 /* Model */,
-				18E5827F2462AE0900029321 /* View */,
+				188EDE292468F57D00DD161E /* DKStatusBarViewController.h */,
+				188EDE2B2468F57D00DD161E /* DKStatusBarViewController.m */,
+				188EDE2A2468F57D00DD161E /* DKStatusBarViewController.xib */,
+				188EDE2C2468F57D00DD161E /* DKTestViewController.h */,
+				188EDE2E2468F57D00DD161E /* DKTestViewController.m */,
+				188EDE2D2468F57D00DD161E /* DKTestViewController.xib */,
 			);
 			path = "StatusBar(状态栏颜色)";
-			sourceTree = "<group>";
-		};
-		18E582772462AE0900029321 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				18E5827C2462AE0900029321 /* DKStatusBarViewController.h */,
-				18E582792462AE0900029321 /* DKStatusBarViewController.m */,
-				18E5827A2462AE0900029321 /* DKStatusBarViewController.xib */,
-				18E582782462AE0900029321 /* DKTestViewController.h */,
-				18E5827B2462AE0900029321 /* DKTestViewController.m */,
-				18E5827D2462AE0900029321 /* DKTestViewController.xib */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		18E5827E2462AE0900029321 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		18E5827F2462AE0900029321 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		18E582802462AE0900029321 /* ScrollImage(轮播图) */ = {
 			isa = PBXGroup;
 			children = (
-				18E582812462AE0900029321 /* Tools */,
 				18E582822462AE0900029321 /* Controller */,
-				18E582892462AE0900029321 /* Model */,
 				18E5828A2462AE0900029321 /* View */,
 			);
 			path = "ScrollImage(轮播图)";
 			sourceTree = "<group>";
 		};
-		18E582812462AE0900029321 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
 		18E582822462AE0900029321 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				18E582882462AE0900029321 /* DKScrollImageViewController.h */,
+				18E582862462AE0900029321 /* DKScrollImageViewController.m */,
+				18E582872462AE0900029321 /* DemoVCWithXib.h */,
 				18E582832462AE0900029321 /* DemoVCWithXib.m */,
 				18E582842462AE0900029321 /* DemoVCWithXib.xib */,
 				18E582852462AE0900029321 /* 005.jpg */,
-				18E582862462AE0900029321 /* DKScrollImageViewController.m */,
-				18E582872462AE0900029321 /* DemoVCWithXib.h */,
-				18E582882462AE0900029321 /* DKScrollImageViewController.h */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		18E582892462AE0900029321 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		18E5828A2462AE0900029321 /* View */ = {
@@ -803,8 +747,6 @@
 			isa = PBXGroup;
 			children = (
 				18E582932462AE0900029321 /* Controller */,
-				18E582972462AE0900029321 /* Model */,
-				18E582982462AE0900029321 /* View */,
 				18E5828E2462AE0900029321 /* Tools */,
 			);
 			path = "UIMenu(长按Label工具条)";
@@ -813,9 +755,9 @@
 		18E5828E2462AE0900029321 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18E582912462AE0900029321 /* JHLabel.h */,
 				18E5828F2462AE0900029321 /* JHLabel.m */,
 				18E582902462AE0900029321 /* UILabel+DK.h */,
-				18E582912462AE0900029321 /* JHLabel.h */,
 				18E582922462AE0900029321 /* UILabel+DK.m */,
 			);
 			path = Tools;
@@ -829,20 +771,6 @@
 				18E582952462AE0900029321 /* DKMenuViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		18E582972462AE0900029321 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		18E582982462AE0900029321 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		18E582992462AE0900029321 /* 3DTouch(3D-Touch) */ = {
@@ -907,8 +835,8 @@
 			isa = PBXGroup;
 			children = (
 				18E582AF2462AE0900029321 /* PhotosContainerView.h */,
-				18E582B02462AE0900029321 /* MSSBrowse */,
 				18E582CC2462AE0900029321 /* PhotosContainerView.m */,
+				18E582B02462AE0900029321 /* MSSBrowse */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1135,22 +1063,23 @@
 				18E583082462AE0A00029321 /* DKMenuViewController.xib in Resources */,
 				18E583092462AE0A00029321 /* DK3DTouchWidgetViewController.xib in Resources */,
 				18E582E42462AE0900029321 /* DYMainViewController.xib in Resources */,
-				18E582E02462AE0900029321 /* DKKeyboardViewController.xib in Resources */,
 				18E583112462AE0A00029321 /* DK3DTouchViewController.xib in Resources */,
 				18E5830B2462AE0A00029321 /* 111Shortcut.plist in Resources */,
 				18E583232462AE0A00029321 /* DKAutoLayoutViewController.xib in Resources */,
 				18E582E72462AE0900029321 /* DKMainViewCell.xib in Resources */,
 				18E582F92462AE0A00029321 /* LaunchScreen.storyboard in Resources */,
+				188EDE282468F54400DD161E /* DKUPushViewController.xib in Resources */,
 				18E582DC2462AE0900029321 /* DKPickerPhotoViewController.xib in Resources */,
 				18E583012462AE0A00029321 /* DemoVCWithXib.xib in Resources */,
 				18E5830F2462AE0A00029321 /* DK3DTouchAppIconViewController.xib in Resources */,
-				18E582FD2462AE0A00029321 /* DKStatusBarViewController.xib in Resources */,
 				18E583022462AE0A00029321 /* 005.jpg in Resources */,
-				18E582FF2462AE0A00029321 /* DKTestViewController.xib in Resources */,
 				18C5810024639DF200EC05A9 /* DKAutoLayoutCell.xib in Resources */,
+				188EDE3C2468F5A400DD161E /* DKKeyboardViewController.xib in Resources */,
 				18E582E92462AE0900029321 /* Assets.xcassets in Resources */,
 				18E5830E2462AE0A00029321 /* 111UnShortcut.plist in Resources */,
 				18E5831E2462AE0A00029321 /* mss_browseLoading@3x.png in Resources */,
+				188EDE2F2468F57E00DD161E /* DKStatusBarViewController.xib in Resources */,
+				188EDE312468F57E00DD161E /* DKTestViewController.xib in Resources */,
 				18E583102462AE0A00029321 /* DK3DTouchChangeCtrViewController.xib in Resources */,
 				18E583202462AE0A00029321 /* mss_browseLoading@2x.png in Resources */,
 			);
@@ -1245,8 +1174,8 @@
 				18E583122462AE0A00029321 /* DK3DTouchChangeCtrViewController.m in Sources */,
 				18E582EF2462AE0A00029321 /* UIBarButtonItem+DY.m in Sources */,
 				18E583062462AE0A00029321 /* UILabel+DK.m in Sources */,
+				188EDE272468F54400DD161E /* DKUPushViewController.m in Sources */,
 				18E582ED2462AE0A00029321 /* UIButton+DY.m in Sources */,
-				18E582FE2462AE0A00029321 /* DKTestViewController.m in Sources */,
 				18E582F02462AE0A00029321 /* NSArray+DY.m in Sources */,
 				18E582EB2462AE0900029321 /* Foundation+DY.m in Sources */,
 				18E5831C2462AE0A00029321 /* MSSBrowseZoomScrollView.m in Sources */,
@@ -1254,7 +1183,6 @@
 				18E582E22462AE0900029321 /* DYNavigationController.m in Sources */,
 				18E582F52462AE0A00029321 /* GTMBase64.m in Sources */,
 				18E583162462AE0A00029321 /* MSSBrowseCollectionViewCell.m in Sources */,
-				18E582DF2462AE0900029321 /* DKKeyboardViewController.m in Sources */,
 				18E582DB2462AE0900029321 /* LxGridViewFlowLayout.m in Sources */,
 				18E582E82462AE0900029321 /* TBTabBar.m in Sources */,
 				18E582EE2462AE0A00029321 /* UIView+DY.m in Sources */,
@@ -1267,13 +1195,14 @@
 				18E582FA2462AE0A00029321 /* main.m in Sources */,
 				18E582E62462AE0900029321 /* DKMainViewCell.m in Sources */,
 				18E583192462AE0A00029321 /* MSSBrowseNetworkViewController.m in Sources */,
+				188EDE322468F57E00DD161E /* DKTestViewController.m in Sources */,
 				18E583172462AE0A00029321 /* MSSBrowseModel.m in Sources */,
 				18E5830C2462AE0A00029321 /* DKShortcut.m in Sources */,
 				18E582F62462AE0A00029321 /* NSObject+DY.m in Sources */,
 				18E583152462AE0A00029321 /* MSSBrowseLocalViewController.m in Sources */,
 				18E582F22462AE0A00029321 /* UILabel+DY.m in Sources */,
+				188EDE3B2468F5A400DD161E /* DKKeyboardViewController.m in Sources */,
 				18E582DE2462AE0900029321 /* TZTestCell.m in Sources */,
-				18E582FC2462AE0A00029321 /* DKStatusBarViewController.m in Sources */,
 				18E5830D2462AE0A00029321 /* DK3DTouchAppIconViewController.m in Sources */,
 				18E583042462AE0A00029321 /* CustomCollectionViewCell.m in Sources */,
 				18E5830A2462AE0A00029321 /* DK3DTouchWidgetViewController.m in Sources */,
@@ -1283,6 +1212,7 @@
 				18E583252462AE0A00029321 /* DKAutoLayoutViewController.m in Sources */,
 				18E583002462AE0A00029321 /* DemoVCWithXib.m in Sources */,
 				18E582E52462AE0900029321 /* DYMainViewController.m in Sources */,
+				188EDE302468F57E00DD161E /* DKStatusBarViewController.m in Sources */,
 				18E583032462AE0A00029321 /* DKScrollImageViewController.m in Sources */,
 				18E583052462AE0A00029321 /* JHLabel.m in Sources */,
 				18E582F72462AE0A00029321 /* UIImage+image.m in Sources */,
@@ -1457,7 +1387,7 @@
 				DEVELOPMENT_TEAM = 46229L5J68;
 				GCC_PREFIX_HEADER = "$SRCROOT//Components/Other/Main/Components.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Components/Other/Main/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1478,7 +1408,7 @@
 				DEVELOPMENT_TEAM = 46229L5J68;
 				GCC_PREFIX_HEADER = "$SRCROOT//Components/Other/Main/Components.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Components/Other/Main/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

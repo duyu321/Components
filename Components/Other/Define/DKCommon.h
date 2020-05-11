@@ -9,6 +9,9 @@
 #import <SDAutoLayout/SDAutoLayout.h>
 #import <SDWebImage/SDWebImage.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
+#import <UMPush/UMessage.h>
+#import <UMCommon/UMCommon.h>
+
 
 // --------- 公共类定义 ---------
 #import "DYBaseViewController.h"
