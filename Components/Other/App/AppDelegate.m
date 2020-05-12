@@ -98,15 +98,30 @@
     }];
 }
 
-//iOS10新增：处理后台点击通知的代理方法
+// iOS10新增：处理后台点击通知的代理方法
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
-        //应用处于后台时的远程推送接受
-        //必须加这句代码
+        // 应用处于后台时的远程推送接受
+        // 必须加这句代码
         [UMessage didReceiveRemoteNotification:userInfo];
     } else {
         //应用处于后台时的本地推送接受
+    }
+}
+
+// iOS10新增：处理前台通知的代理方法
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if ([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        // 应用处于前台台时的远程推送接受
+        // 必须加这句代码
+//        [UMessage didReceiveRemoteNotification:userInfo];
+//        [UIFont systemFontOfSize:15]
+        NSLog(@"");
+    } else {
+        // 应用处于前台时的本地推送接受
+        NSLog(@"");
     }
 }
 

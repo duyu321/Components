@@ -1385,6 +1385,7 @@
 				CODE_SIGN_ENTITLEMENTS = Components/Components.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46229L5J68;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$SRCROOT//Components/Other/Main/Components.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Components/Other/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1404,8 +1405,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Components/Components.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46229L5J68;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$SRCROOT//Components/Other/Main/Components.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Components/Other/Main/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

@@ -34,6 +34,8 @@
     // UMCCommon 集成文档：https://developer.umeng.com/docs/66632/detail/66885
     // UMCPush 集成文档：https://developer.umeng.com/docs/66632/detail/66734
     // 推送测试后台：https://message.umeng.com/app/5eb3a719978eea082619cd1e/testmode （需将测试设备deviceToken添加）
+    
+    // 注意如果测试正式环境推送，需在developer.apple.com中建Ad-Hoc证书，并在打包的时候选择相对应的描述文件
 }
 
 @end
