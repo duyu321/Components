@@ -134,7 +134,8 @@
                           ntohl(tokenBytes[3]), ntohl(tokenBytes[4]), ntohl(tokenBytes[5]),
                           ntohl(tokenBytes[6]), ntohl(tokenBytes[7])];
     NSLog(@"deviceToken:%@",hexToken);
-    [UMessage registerDeviceToken:deviceToken];
+    // sdk会自动上传
+//    [UMessage registerDeviceToken:deviceToken];
 }
 
 // Widget 进入
