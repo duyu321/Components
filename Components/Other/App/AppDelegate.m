@@ -113,6 +113,7 @@
 // iOS10新增：处理前台通知的代理方法
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
     NSDictionary * userInfo = notification.request.content.userInfo;
+    NSLog(@"%@",userInfo);
     if ([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         // 应用处于前台台时的远程推送接受
         // 必须加这句代码
