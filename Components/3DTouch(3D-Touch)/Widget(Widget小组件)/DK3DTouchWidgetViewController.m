@@ -45,19 +45,13 @@
     [userDefaults setObject:@"" forKey:@"widget"];
     [userDefaults synchronize];
     
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"数据已清除！" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
+    MESSAGEBOX(@"数据已清除！")
 }
 
 - (IBAction)ensureButtonPressed:(id)sender {
     [self.view endEditing:YES];
     if (self.textField.text.length == 0) {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"拜托，稍微写两个字好不好" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
-        [alert addAction:action];
-        [self presentViewController:alert animated:YES completion:nil];
+        MESSAGEBOX(@"拜托，稍微写两个字好不好")
         
         return;
     }
@@ -66,10 +60,7 @@
     [userDefaults setObject:self.textField.text forKey:@"widget"];
     [userDefaults synchronize];
 
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"数据已更新！" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:nil];
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
+    MESSAGEBOX(@"数据已更新！")
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

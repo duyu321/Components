@@ -15,6 +15,8 @@
 		188EDE322468F57E00DD161E /* DKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EDE2E2468F57D00DD161E /* DKTestViewController.m */; };
 		188EDE3B2468F5A400DD161E /* DKKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188EDE392468F5A400DD161E /* DKKeyboardViewController.m */; };
 		188EDE3C2468F5A400DD161E /* DKKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188EDE3A2468F5A400DD161E /* DKKeyboardViewController.xib */; };
+		188F4CD5246E2EE6004F8315 /* DKNotifactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188F4CD3246E2EE6004F8315 /* DKNotifactionViewController.m */; };
+		188F4CD6246E2EE6004F8315 /* DKNotifactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188F4CD4246E2EE6004F8315 /* DKNotifactionViewController.xib */; };
 		18C580F62462B98900EC05A9 /* login_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F02462B98900EC05A9 /* login_wechat@2x.png */; };
 		18C580F72462B98900EC05A9 /* login_QQ@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F12462B98900EC05A9 /* login_QQ@2x.png */; };
 		18C580F82462B98900EC05A9 /* login_QQ@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C580F22462B98900EC05A9 /* login_QQ@3x.png */; };
@@ -152,6 +154,9 @@
 		188EDE382468F5A400DD161E /* DKKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKKeyboardViewController.h; sourceTree = "<group>"; };
 		188EDE392468F5A400DD161E /* DKKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKKeyboardViewController.m; sourceTree = "<group>"; };
 		188EDE3A2468F5A400DD161E /* DKKeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DKKeyboardViewController.xib; sourceTree = "<group>"; };
+		188F4CD2246E2EE6004F8315 /* DKNotifactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKNotifactionViewController.h; sourceTree = "<group>"; };
+		188F4CD3246E2EE6004F8315 /* DKNotifactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKNotifactionViewController.m; sourceTree = "<group>"; };
+		188F4CD4246E2EE6004F8315 /* DKNotifactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DKNotifactionViewController.xib; sourceTree = "<group>"; };
 		18C580F02462B98900EC05A9 /* login_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_wechat@2x.png"; sourceTree = "<group>"; };
 		18C580F12462B98900EC05A9 /* login_QQ@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_QQ@2x.png"; sourceTree = "<group>"; };
 		18C580F22462B98900EC05A9 /* login_QQ@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_QQ@3x.png"; sourceTree = "<group>"; };
@@ -362,6 +367,16 @@
 			path = "UPush(友盟推送)";
 			sourceTree = "<group>";
 		};
+		188F4CD1246E2D38004F8315 /* Notifaction(本地通知) */ = {
+			isa = PBXGroup;
+			children = (
+				188F4CD2246E2EE6004F8315 /* DKNotifactionViewController.h */,
+				188F4CD3246E2EE6004F8315 /* DKNotifactionViewController.m */,
+				188F4CD4246E2EE6004F8315 /* DKNotifactionViewController.xib */,
+			);
+			path = "Notifaction(本地通知)";
+			sourceTree = "<group>";
+		};
 		18E581D52462AD9D00029321 = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +413,7 @@
 				18E5828D2462AE0900029321 /* UIMenu(长按Label工具条) */,
 				18E582992462AE0900029321 /* 3DTouch(3D-Touch) */,
 				188EDE232468F52A00DD161E /* UPush(友盟推送) */,
+				188F4CD1246E2D38004F8315 /* Notifaction(本地通知) */,
 				18E5822B2462AE0900029321 /* Main */,
 				18E5823F2462AE0900029321 /* Other */,
 				18E5823D2462AE0900029321 /* Resource */,
@@ -1069,6 +1085,7 @@
 				18E582E72462AE0900029321 /* DKMainViewCell.xib in Resources */,
 				18E582F92462AE0A00029321 /* LaunchScreen.storyboard in Resources */,
 				188EDE282468F54400DD161E /* DKUPushViewController.xib in Resources */,
+				188F4CD6246E2EE6004F8315 /* DKNotifactionViewController.xib in Resources */,
 				18E582DC2462AE0900029321 /* DKPickerPhotoViewController.xib in Resources */,
 				18E583012462AE0A00029321 /* DemoVCWithXib.xib in Resources */,
 				18E5830F2462AE0A00029321 /* DK3DTouchAppIconViewController.xib in Resources */,
@@ -1178,6 +1195,7 @@
 				18E582ED2462AE0A00029321 /* UIButton+DY.m in Sources */,
 				18E582F02462AE0A00029321 /* NSArray+DY.m in Sources */,
 				18E582EB2462AE0900029321 /* Foundation+DY.m in Sources */,
+				188F4CD5246E2EE6004F8315 /* DKNotifactionViewController.m in Sources */,
 				18E5831C2462AE0A00029321 /* MSSBrowseZoomScrollView.m in Sources */,
 				18E582F42462AE0A00029321 /* NSDictionary+DY.m in Sources */,
 				18E582E22462AE0900029321 /* DYNavigationController.m in Sources */,

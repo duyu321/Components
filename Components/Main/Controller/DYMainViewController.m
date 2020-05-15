@@ -16,6 +16,7 @@
 #import "DKMainViewCell.h"
 #import "DK3DTouchViewController.h"
 #import "DKUPushViewController.h"
+#import "DKNotifactionViewController.h"
 
 @interface DYMainViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -80,12 +81,15 @@ static NSString *const DKMainViewCellId = @"DKMainViewCellId";
     if ([self.dataArray[indexPath.row] isEqualToString:@"友盟推送"]) {
         [self.navigationController pushViewController:[[DKUPushViewController alloc] init] animated:YES];
     }
+    if ([self.dataArray[indexPath.row] isEqualToString:@"本地通知"]) {
+        [self.navigationController pushViewController:[[DKNotifactionViewController alloc] init] animated:YES];
+    }
     
 }
 
 - (NSArray<NSString *> *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"状态栏颜色",@"键盘",@"照片选择",@"Cell图片自适应",@"轮播图",@"长按Label工具条",@"3D-Touch",@"友盟推送"];
+        _dataArray = @[@"状态栏颜色",@"键盘",@"照片选择",@"Cell图片自适应",@"轮播图",@"长按Label工具条",@"3D-Touch",@"友盟推送",@"本地通知"];
     }
     return _dataArray;
 }

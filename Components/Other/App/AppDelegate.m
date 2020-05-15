@@ -29,6 +29,8 @@
     [self setUMCommon];
     // 设置友盟推送
     [self setPush:launchOptions];
+    // 设置本地通知
+    [self setNotification];
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -91,9 +93,20 @@
     [UNUserNotificationCenter currentNotificationCenter].delegate = self;
     [UMessage registerForRemoteNotificationsWithLaunchOptions:launchOptions Entity:entity completionHandler:^(BOOL granted, NSError * _Nullable error) {
         if (granted) {
-            
+            // 注册成功
         } else {
-            
+            // 注册失败
+        }
+    }];
+}
+
+- (void)setNotification {
+    UNUserNotificationCenter * center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (granted) {
+            // 注册成功
+        } else {
+            // 注册失败
         }
     }];
 }
@@ -103,10 +116,12 @@
     NSDictionary * userInfo = response.notification.request.content.userInfo;
     if ([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
         // 应用处于后台时的远程推送接受
+        MESSAGEBOX(@"后台远程推送")
         // 必须加这句代码
         [UMessage didReceiveRemoteNotification:userInfo];
     } else {
-        //应用处于后台时的本地推送接受
+        //应用处于后台时的本地通知接受
+        MESSAGEBOX(@"后台本地通知")
     }
 }
 
@@ -118,11 +133,10 @@
         // 应用处于前台台时的远程推送接受
         // 必须加这句代码
 //        [UMessage didReceiveRemoteNotification:userInfo];
-//        [UIFont systemFontOfSize:15]
-        NSLog(@"");
+        MESSAGEBOX(@"前台远程推送")
     } else {
         // 应用处于前台时的本地推送接受
-        NSLog(@"");
+        MESSAGEBOX(@"前台本地通知")
     }
 }
 
@@ -150,13 +164,8 @@
                 [nav pushViewController:[[DK3DTouchWidgetViewController alloc] init] animated:YES];
             });
         }
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"你点击了%@按钮",[url host]] preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            // Do something
-        }];
-        [alert addAction:action];
-        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+        NSString *msg = [NSString stringWithFormat:@"你点击了%@按钮",[url host]];
+        MESSAGEBOX(msg)
     }
     return  YES;
 }

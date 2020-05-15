@@ -134,9 +134,11 @@
 
 #define MESSAGEBOX(msg)\
 {\
-UIAlertView*_alert=[[UIAlertView alloc] initWithTitle:@"温馨提示" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];\
-_alert.transform=CGAffineTransformMakeTranslation(0,80); \
-[_alert show];\
+UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:msg preferredStyle:UIAlertControllerStyleAlert];\
+UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {\
+}];\
+[alert addAction:action];\
+[[[[UIApplication sharedApplication] delegate] window].rootViewController presentViewController:alert animated:YES completion:nil];\
 }
 
 
